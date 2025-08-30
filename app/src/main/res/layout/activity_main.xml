@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/arrowImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/arrow_foreground" />
+
+    <ToggleButton
+        android:id="@+id/toggleGyro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Gyro ON"
+        android:textOff="Gyro OFF"
+        android:layout_below="@id/arrowImage"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/gyroStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DISABLED - arrow is still"
+        android:textSize="16sp"
+        android:layout_below="@id/toggleGyro"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/gyroData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gyroscope Data"
+        android:layout_below="@id/gyroStatusText"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp" />
+
+    <SeekBar
+        android:id="@+id/sensitivitySeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gyroData"
+        android:layout_marginTop="20dp"
+        android:max="20"
+        android:progress="10" />
+
+    <TextView
+        android:id="@+id/sensitivityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sensitivity: 10"
+        android:layout_below="@id/sensitivitySeekBar"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/accelData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accelerometer Data"
+        android:layout_below="@id/sensitivityText"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status messages here"
+        android:layout_below="@id/accelData"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+</RelativeLayout>
